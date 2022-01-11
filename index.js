@@ -25,7 +25,7 @@ const getAwards = async () => {
     })
 }
 
-const main = async () => {
+export const main = async () => {
     try {
         const { game_uid, region } = await getUserInfo()
         const { first_bind, total_sign_day } = await getSignInfo(game_uid)
