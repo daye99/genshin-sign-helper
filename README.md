@@ -8,4 +8,4 @@
 
 登录[腾讯云函数](https://console.cloud.tencent.com/scf/list?rid=1&ns=default)，选择`Serverless -> 函数服务`
 
-<img src="https://picgo-1300387158.cos.ap-guangzhou.myqcloud.com/img/20220111181657.png" style="zoom:50%;" />
+<img src="https://picgo-1300387158.cos.ap-guangzhou.myqcloud.com/img/20220112153340.png" style="zoom:50%;" />

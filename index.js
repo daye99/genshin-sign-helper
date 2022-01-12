@@ -4,8 +4,7 @@ const http = require('./request.js')
 const CONFIG = require('./baseConfig.js')
 
 const { GetHeaders } = require('./getHeaders.js')
-// import { SendMessage } from './sendMessage.js'
-const { SendMessage } = require('./sendMessage.js')
+// const { SendMessage } = require('./sendMessage.js')
 
 const getUserInfo = async () => {
     const res = await http.get(CONFIG.GET_USER_INFO, {
@@ -27,7 +26,8 @@ const getAwards = async () => {
     })
 }
 
-exports.main = async () => {
+// exports.main = async () => {
+const main = async () => {
     try {
         const { game_uid, region } = await getUserInfo()
         console.log(123123)
@@ -39,7 +39,7 @@ exports.main = async () => {
             return
         }
         const headers = GetHeaders()
-
+        headers['Accept-Encoding'] = 'gzip, deflate, br'
         const res = await http.post(
             CONFIG.POST_SIGN,
             {
@@ -52,11 +52,13 @@ exports.main = async () => {
             }
         )
         console.log(res)
-        SendMessage(`原神签到助手:成功 ${awards.awards[total_sign_day].name} * ${awards.awards[total_sign_day].cnt}`)
+        // SendMessage(`原神签到助手:成功 ${awards.awards[total_sign_day].name} * ${awards.awards[total_sign_day].cnt}`)
     } catch (error) {
         console.log(1999999)
         console.log(error)
         console.log(345345345345)
-        SendMessage(`原神签到助手:失败 ${error}`)
+        // SendMessage(`原神签到助手:失败 ${error}`)
     }
 }
+
+main()

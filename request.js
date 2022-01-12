@@ -22,6 +22,7 @@ class Request {
         })
     }
     post(url, data = {}, config = {}) {
+        console.log(config.headers)
         return new Promise((resolve, reject) => {
             const instance = request(
                 {
@@ -31,6 +32,7 @@ class Request {
                     ...config,
                 },
                 (err, res, body) => {
+                    console.log(body)
                     if (err) {
                         reject(err)
                     }

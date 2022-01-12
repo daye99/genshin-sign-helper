@@ -2,6 +2,8 @@ const act_id = 'e202009291139501'
 
 const region = 'cn_gf01'
 
+exports.VERSION = '2.20.1'
+
 exports.Referer = `https://webstatic.mihoyo.com/bbs/event/signin-ys/index.html?bbs_auth_required=true&act_id=${act_id}&utm_source=bbs&utm_medium=mys&utm_campaign=icon`
 
 exports.Host = 'api-takumi.mihoyo.com'

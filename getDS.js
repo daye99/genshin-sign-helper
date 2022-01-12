@@ -1,9 +1,19 @@
-// const md5Hex = require('md5-hex')
-const { createHash } = require('crypto')
-const md5 = createHash('md5')
+const crypto = require('crypto');
 
 const md5Hex = (str) => {
-    return md5.update(str).digest('hex')
+    const hash = crypto.createHash('md5')
+    const update = (buffer) => {
+        const inputEncoding = typeof buffer === 'string' ? 'utf8' : undefined
+        hash.update(buffer, inputEncoding)
+    }
+    if (Array.isArray(str)) {
+        for (const element of str) {
+            update(element)
+        }
+    } else {
+        update(str)
+    }
+    return hash.digest('hex')
 }
 
 const { GetRandomStr } = require('./getRandomStr.js')
