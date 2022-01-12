@@ -1,13 +1,11 @@
+const yaml = require('js-yaml')
+const fs = require('fs')
 
+const { GetDS } = require('./getDS.js')
 
-import yaml from 'js-yaml'
-import fs from 'node:fs'
-
-import { GetDS } from './getDS.js'
-
-export const GetHeaders = () => {
+const GetHeaders = () => {
     const { Cookie } = yaml.load(fs.readFileSync('./config.yaml').toString())
-
+    if (!Cookie) throw(new Error('请正确输入Cookie'))
     const headers = {
         'accept-language': 'zh-CN,zh;q=0.9,ja-JP;q=0.8,ja;q=0.7,en-US;q=0.6,en;q=0.5',
         'x-rpc-device_id': '368E4D480FE14870970793C1FAA2C795',
@@ -27,3 +25,5 @@ export const GetHeaders = () => {
     headers['Cookie'] = Cookie
     return headers
 }
+
+module.exports = { GetHeaders }

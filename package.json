@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,9 +12,7 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "js-yaml": "^4.1.0",
-    "md5-hex": "^4.0.0",
-    "request": "^2.88.2",
-    "uuid": "^8.3.2"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "chalk": "^5.0.0",

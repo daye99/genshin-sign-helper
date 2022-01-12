@@ -1,6 +1,4 @@
-
-
-import request from 'request'
+const request = require('request')
 
 class Request {
     constructor() {}
@@ -44,5 +42,4 @@ class Request {
         })
     }
 }
-
-export default new Request()
+module.exports = new Request()

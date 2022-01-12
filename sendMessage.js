@@ -1,10 +1,10 @@
-import yaml from 'js-yaml'
-import fs from 'node:fs'
+const fs = require('fs')
+const yaml = require('js-yaml')
 
-import http from './request.js'
-
+const http = require('./request.js')
 
 const { SENDKEY } = yaml.load(fs.readFileSync('./config.yaml').toString())
+if (!SENDKEY) throw new Error('请正确输入SENDKEY')
 
 const SendMessage = async (title) => {
     try {
@@ -13,4 +13,4 @@ const SendMessage = async (title) => {
     } catch (error) {}
 }
 
-export { SendMessage }
+module.exports = { SendMessage }

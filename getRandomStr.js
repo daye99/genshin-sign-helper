@@ -1,4 +1,3 @@
-
 const GetRandomStr = (e) => {
     const d = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'
     const t = d.length
@@ -7,4 +6,4 @@ const GetRandomStr = (e) => {
     return n
 }
 
-export { GetRandomStr }
+module.exports = { GetRandomStr }
