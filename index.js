@@ -27,7 +27,7 @@ const getAwards = async () => {
     })
 }
 
- const main = async () => {
+exports.main = async () => {
     try {
         const { game_uid, region } = await getUserInfo()
         console.log(123123)
@@ -60,5 +60,3 @@ const getAwards = async () => {
         SendMessage(`原神签到助手:失败 ${error}`)
     }
 }
-
-main()
