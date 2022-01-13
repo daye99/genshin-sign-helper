@@ -13,12 +13,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout master
+        uses: actions/checkout@master
+        ref: master
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with: 
+          node-version: "16"
 
       - name: genshin-sign
         uses: daye99/genshin-sign-helper@master
-        with: 
-          node-version: "16"
         env: 
           COOKIE: ${{secrets.COOKIE}}
           SENDKEY: ${{secrets.SENDKEY}}
