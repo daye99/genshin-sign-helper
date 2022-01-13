@@ -3,7 +3,7 @@ import http from './request.js'
 import CONFIG from './baseConfig.js'
 
 import { GetHeaders } from './getHeaders.js'
-import { SendMessage } from './sendMessage.js'
+// import { SendMessage } from './sendMessage.js'
 
 const getUserInfo = async () => {
     const res = await http.get(CONFIG.GET_USER_INFO, {
@@ -25,7 +25,7 @@ const getAwards = async () => {
     })
 }
 
-export const main = async () => {
+const main = async () => {
     try {
         const { game_uid, region } = await getUserInfo()
         const { first_bind, total_sign_day } = await getSignInfo(game_uid)
@@ -53,3 +53,4 @@ export const main = async () => {
 }
 
 
+main()
