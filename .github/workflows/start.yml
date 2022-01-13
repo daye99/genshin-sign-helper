@@ -5,25 +5,24 @@ name: Node.js CI
 
 on:
   push:
-  schedule: 
-    - cron: '0 0 * * *'
+  schedule:
+    - cron: "0 0 * * *"
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.11.1]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-      uses: actions/checkout@master
-    - name: genshin-sign
-      uses: daye99/genshin-sign-helper@master
-      env: 
-        COOKIE: ${{secrets.COOKIE}}
-        SENDKEY: ${{secrets.SENDKEY}}
-      run: |
-        "npm i pnpm -g"
-        "pnpm i"
-        "node ./index.js"
+      - uses: actions/checkout@master
+
+      - name: genshin-sign
+        uses: daye99/genshin-sign-helper@master
+        with: 
+          node-version: "16"
+        env: 
+          COOKIE: ${{secrets.COOKIE}}
+          SENDKEY: ${{secrets.SENDKEY}}
+        run: |
+          "npm i pnpm -g"
+          "pnpm i"
+          "node ./index.js"
