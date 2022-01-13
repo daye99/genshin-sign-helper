@@ -3,7 +3,7 @@ import http from './request.js'
 import CONFIG from './baseConfig.js'
 
 import { GetHeaders } from './getHeaders.js'
-// import { SendMessage } from './sendMessage.js'
+import { SendMessage } from './sendMessage.js'
 
 const getUserInfo = async () => {
     const res = await http.get(CONFIG.GET_USER_INFO, {
