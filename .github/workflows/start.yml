@@ -21,7 +21,7 @@ jobs:
 
     steps:
     - name: genshin-sign
-      uses: daye99/genshin-sign-helper@main
+      uses: daye99/genshin-sign-helper@master
       env: 
         COOKIE: ${{secrets.COOKIE}}
         SENDKEY: ${{secrets.SENDKEY}}
