@@ -22,8 +22,10 @@ jobs:
         with: 
           node-version: "16"
 
-      - name: genshin-sign
+      - name: Change use
         uses: daye99/genshin-sign-helper@master
+
+      - name: genshin-sign
         env: 
           COOKIE: ${{secrets.COOKIE}}
           SENDKEY: ${{secrets.SENDKEY}}
