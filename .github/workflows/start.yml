@@ -20,14 +20,14 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - name: Checkout
       uses: actions/checkout@master
     
-    steps:
     - name: genshin-sign
       uses: daye99/genshin-sign-helper@master
       env: 
         COOKIE: ${{secrets.COOKIE}}
         SENDKEY: ${{secrets.SENDKEY}}
-      run: 
+      run: |
+        "npm i pnpm -g"
+        "pnpm i"
         "node ./index.js"
