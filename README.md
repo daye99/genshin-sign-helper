@@ -76,3 +76,20 @@ if (ask == true) {
 
 最后点击`Run workflow`就完成了
 
+## 开发
+
+这个项目的开发离不开两位大佬的开源项目支持
+
+https://github.com/sirodeneko/genshin-sign/blob/HEAD/README.md#L62-L92（Python）
+
+https://github.com/PonKing66/genshi-helper（Java）
+
+在这再次膜拜两位大佬，下面协议都是出自sirodeneko大佬的复制啊哈哈哈哈
+
+## 协议
+
+使用 genshin-sign-helper即表明，您知情并同意：
+
+- 此代码通过模拟浏览器使用 Cookies 登录米游社网页，点击页面完成签到来实现签到。功能通过官方公开的 API 实现，并非游戏外挂
+
+- 用户之 Cookie 被储存于 Github 服务器，只供本项目使用。若 Github 服务器被攻破，则您的 Cookie 有遭到泄露的风险。除此之外，开发者无权获取您的 Cookie；即使是用户，一旦创建完成`Secrets`，也无法再次从中查看 Cookie
