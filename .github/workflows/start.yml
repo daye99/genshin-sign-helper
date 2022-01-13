@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Checkout master
         uses: actions/checkout@master
-        ref: master
+        # ref: master
 
       - name: Setup node
         uses: actions/setup-node@v1
