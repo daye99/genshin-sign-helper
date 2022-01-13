@@ -16,12 +16,13 @@ jobs:
       - uses: actions/checkout@master
 
       - name: genshin-sign
+        uses: daye99/genshin-sign-helper@master
         with: 
           node-version: "16"
         env: 
           COOKIE: ${{secrets.COOKIE}}
           SENDKEY: ${{secrets.SENDKEY}}
         run: |
-          "npm i pnpm -g"
-          "pnpm i"
-          "node ./index.js"
+          npm i pnpm -g
+          pnpm i
+          node ./index.js
