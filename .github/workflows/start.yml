@@ -11,17 +11,13 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: [16.11.1]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
       uses: actions/checkout@master
-    
     - name: genshin-sign
       uses: daye99/genshin-sign-helper@master
       env: 
