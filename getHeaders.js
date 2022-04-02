@@ -1,3 +1,11 @@
+/*
+ * @Author: wenzhenjin
+ * @Date: 2022-04-02 10:30:34
+ * @LastEditTime: 2022-04-02 10:36:43
+ * @LastEditors: wenzhenjin
+ * @Description: 
+ * @FilePath: /genshin-sign-helper/getHeaders.js
+ */
 import yaml from 'js-yaml'
 import fs from 'node:fs'
 import { v4 as uuidv4 } from 'uuid'
@@ -5,8 +13,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { GetDS } from './getDS.js'
 
 export const GetHeaders = () => {
-    // const { Cookie } = yaml.load(fs.readFileSync('./config.yaml').toString())
-    const Cookie = process.env.COOKIE
+    const { Cookie } = yaml.load(fs.readFileSync('./config.yaml').toString())
+    // const Cookie = process.env.COOKIE
 
     const headers = {
         'accept-language': 'zh-CN,zh;q=0.9,ja-JP;q=0.8,ja;q=0.7,en-US;q=0.6,en;q=0.5',
