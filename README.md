@@ -64,9 +64,10 @@ if (ask == true) {
 
 `Value`为粘贴的值
 
-
-
 > 注：Name中填写的SENDKEY及COOKIE必须为大写、必须为大写、必须为大写
+
+### 4.运行
+
 
 然后回到项目，点击`Actions`
 
