@@ -81,11 +81,11 @@ if (ask == true) {
 
 这个项目的开发离不开两位大佬的开源项目支持
 
-https://github.com/sirodeneko/genshin-sign/blob/HEAD/README.md#L62-L92（Python）
+[Python](https://github.com/sirodeneko/genshin-sign/blob/HEAD/README.md#L62-L92)
 
-https://github.com/PonKing66/genshi-helper（Java）
+[Java](https://github.com/PonKing66/genshi-helper)
 
-在这再次膜拜两位大佬，下面协议都是出自sirodeneko大佬的复制啊哈哈哈哈
+在这再次膜拜两位大佬
 
 ## 协议
 
