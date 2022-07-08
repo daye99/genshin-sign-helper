@@ -1,5 +1,5 @@
 
-const GetRandomStr = (e) => {
+const GetRandomStr = (e: number) => {
     const d = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678'
     const t = d.length
     let n = ''

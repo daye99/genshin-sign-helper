@@ -1,8 +1,8 @@
 import request from 'request'
 
 class Request {
-    constructor() {}
-    get(url, config = {}) {
+    constructor() { }
+    get(url: string, config = {}) {
         return new Promise((resolve, reject) => {
             request(
                 {
@@ -10,11 +10,11 @@ class Request {
                     method: 'GET',
                     ...config,
                 },
-                (err, res, body) => {
+                (err: any, res: any, bodyStr: string) => {
                     if (err) {
                         reject(err)
                     }
-                    body = JSON.parse(body)
+                    const body: API.ResObject | SIGNINRO.ResObject | AWARDSAPI.ResObject = JSON.parse(bodyStr)
                     if (body.retcode !== 0) reject(body.message)
                     resolve(body.data)
                 }
@@ -30,11 +30,11 @@ class Request {
                     body: JSON.stringify(data),
                     ...config,
                 },
-                (err, res, body) => {
+                (err: any, res: any, bodyStr: string) => {
                     if (err) {
                         reject(err)
                     }
-                    body = JSON.parse(body)
+                    const body = JSON.parse(bodyStr) as API.ResObject
                     if (body.retcode !== 0) reject(body.message)
                     resolve(body.message)
                 }

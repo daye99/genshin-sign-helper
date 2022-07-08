@@ -6,17 +6,16 @@
  * @Description: 
  * @FilePath: /genshin-sign-helper/getHeaders.js
  */
-import yaml from 'js-yaml'
-import fs from 'node:fs'
 import { v4 as uuidv4 } from 'uuid'
 
 import { GetDS } from './getDS.js'
 
 export const GetHeaders = () => {
     // const { Cookie } = yaml.load(fs.readFileSync('./config.yaml').toString())
-    const Cookie = process.env.COOKIE
+    // const Cookie = process.env.COOKIE
+    const Cookie = 'UM_distinctid=181b87e14696f8-09318cde2bacae-1c525635-13c680-181b87e146ae1e; _ga=GA1.2.1578227873.1656657680; _gid=GA1.2.1716387756.1656657680; CNZZDATA1275023096=1269326415-1656657042-%7C1656657042; _gat=1; _MHYUUID=d8931448-d53f-40eb-8c23-f95172b5284f; ltoken=LObhyuMhtcIVHuymQbYY3Yg9oSDDUhHFySFnYxVU; ltuid=270839143; cookie_token=v7PEEQxycajCcynjBNwbJiSjObPAaqMTj28C9MBo; account_id=270839143'
 
-    const headers = {
+    const headers:OPTION.Headers = {
         'accept-language': 'zh-CN,zh;q=0.9,ja-JP;q=0.8,ja;q=0.7,en-US;q=0.6,en;q=0.5',
         'x-rpc-device_id': uuidv4().replace('-', '').toLocaleUpperCase(),
         'User-Agent':

@@ -1,5 +1,10 @@
 
-import md5Hex from 'md5-hex'
+// import md5Hex from 'md5-hex'
+
+// export default function md5Hex(data: Buffer | string | ReadonlyArray<Buffer | string>): string;
+
+
+import md5Hex from './utils/md5Hex'
 
 import { GetRandomStr } from './getRandomStr.js'
 
